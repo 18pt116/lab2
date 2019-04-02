@@ -1,25 +1,21 @@
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
 int main() 
 {
-	int N, A[9999], i;
+	int  A, i;
 	
 	cout <<"Искомое число: ";
-	cin >> N;
+	cin >> A;
 	
-	if(N!=0) {
-		cout << "Последовательность: \n";
-		for(i=0;i<9999;i++) {
-			cin >> A[i];
-			if (A[i]==0) break;
-			else if (A[i]==N) {
-				cout << "Найдено: " << A[i] << endl;
+	do{
+		cout << "Число: ";
+		cin >> i;
+			if (A==i) {
+				cout << "Найдено: " << A<< endl;
 				return 0;
 			} 
-		}
-	}
+		}while (i!=0);
 	cout <<"Не найдено.\n: ";
 	return 0;
 }

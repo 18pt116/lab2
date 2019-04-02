@@ -1,17 +1,19 @@
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
 int main() 
 {
-	int A[9999], i, sum=0;
-	
-	cout <<"Последовательность: \n";
-	for( int i=0;i<9999;i++){
-	cin >> A[i];
-	
-	if (A[i]==0) break;
-	else if (A[i]>0) sum = sum + A[i];
+	int A, i, sum=0;
+	cout <<"Длина Последовательности: ";
+	cin >> A;
+	int* a = new int [A];
+	cout <<"Введите числа: ";
+	for (int i=0;i<A;i++){
+	 cin >> a[i];
+	if (a[i]>0) {
+		sum = sum + a[i];
+	}
+	else break ;
 	} 
 			
 	cout <<"Сумма : " << sum << endl;
